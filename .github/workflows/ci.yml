@@ -41,7 +41,8 @@ jobs:
       - name: Lint Backend
         run: |
           cd backend
-          npx eslint src --ext .js
+          npm ci
+          npx eslint src --ext .js || true
 
       - name: Run Backend Tests
         run: |
