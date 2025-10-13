@@ -38,3 +38,12 @@ jobs:
           sleep 5
           curl -f http://localhost:3001 || exit 1
 
+      - name: Lint Backend
+        run: |
+          cd backend
+          npx eslint src --ext .js
+
+      - name: Run Backend Tests
+        run: |
+          cd backend
+          npx jest --passWithNoTests
