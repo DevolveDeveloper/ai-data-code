@@ -1,3 +1,11 @@
+# 1.0.0 (2025-10-13)
+
+
+### Bug Fixes
+
+* **ci:** remove yaml header and set permissions for semantic-release ([d1e1603](https://github.com/DevolveDeveloper/ai-data-code/commit/d1e16039ef9c294d5c53216ed1aecb1b43a17d88))
+* remove invalid YAML header from CI workflow ([c30ca07](https://github.com/DevolveDeveloper/ai-data-code/commit/c30ca078926e685f85f888d6047ea23e29f151c1))
+
 # 📘 Changelog
 
 All notable changes to this project will be documented in this file.

@@ -22,5 +22,6 @@
     "*.{js,jsx,ts,tsx,json,md,yml,yaml,css}": [
       "prettier --write"
     ]
-  }
+  },
+  "version": "1.0.0"
 }
