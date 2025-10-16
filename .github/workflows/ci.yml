@@ -50,7 +50,7 @@ jobs:
       - name: Run Backend Tests
         run: |
           cd backend
-          npx jest --passWithNoTests
+          npm test
 
       # ✅ Run semantic-release automatically
       - name: Run Semantic Release
