@@ -7,7 +7,10 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint . --ext .js,.mjs --max-warnings=0",
+    "format": "prettier --write .",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --runInBand",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +23,7 @@
     "aws-sdk": "^2.1692.0",
     "bullmq": "^5.61.0",
     "dotenv": "^17.2.3",
+    "dotenv-safe": "^9.1.0",
     "fastify": "^5.6.1",
     "fastify-cors": "^6.0.3",
     "fastify-rate-limit": "^5.8.0",
@@ -30,9 +34,22 @@
     "zod": "^4.1.12"
   },
   "devDependencies": {
+    "@eslint/js": "^9.37.0",
+    "eslint": "^9.37.0",
+    "eslint-config-prettier": "^9.1.2",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.4.0",
     "jest": "^30.2.0",
     "nodemon": "^3.1.10",
-    "supertest": "^7.1.4"
+    "prettier": "^3.6.2",
+    "supertest": "^7.1.4",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10"
+  },
+  "lint-staged": {
+    "*.{js,mjs,json,md}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }
-
