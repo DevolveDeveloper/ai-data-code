@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/DevolveDeveloper/ai-data-code/compare/v1.0.0...v1.0.1) (2025-10-16)
+
+
+### Bug Fixes
+
+* **ci:** add explicit Jest config for backend/tests ([8a98f41](https://github.com/DevolveDeveloper/ai-data-code/commit/8a98f415da447d19d74e26bc4837266f3c8c1a4a))
+* **ci:** ensure backend Jest tests run properly ([1a6280c](https://github.com/DevolveDeveloper/ai-data-code/commit/1a6280cd4663eb40339289e1f74209e6bf9b3827))
+* **ci:** switch Jest config to CommonJS syntax ([066c6fc](https://github.com/DevolveDeveloper/ai-data-code/commit/066c6fc3d956b5c5725bd975735035ee2449f4fd))
+
 # 1.0.0 (2025-10-13)
 
 
