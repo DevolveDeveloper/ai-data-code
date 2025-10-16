@@ -52,6 +52,18 @@ jobs:
           cd backend
           npm test
 
+      # ✅ Upload build and test artifacts
+      - name: Upload CI Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-and-test-artifacts
+          path: |
+            frontend/.next
+            backend/test-results/
+            CHANGELOG.md
+          retention-days: 7
+
       # ✅ Run semantic-release automatically
       - name: Run Semantic Release
         if: github.ref == 'refs/heads/main'
@@ -61,3 +73,15 @@ jobs:
         run: |
           npm install -g semantic-release @semantic-release/git @semantic-release/changelog @semantic-release/github
           npx semantic-release
+
+      # ✅ Upload build & test artifacts (dummy verification)
+      - name: Prepare dummy artifact
+        run: |
+          echo "CI build successful at $(date)" > ci-results.txt
+          echo "Backend and frontend verified ✅" >> ci-results.txt
+
+      - name: Upload build and test artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-and-test-artifacts
+          path: ci-results.txt
