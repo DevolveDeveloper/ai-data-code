@@ -1,5 +1,5 @@
  // backend/jest.config.cjs
-export default {
+module.exports = {
   testEnvironment: "node",
   roots: ["<rootDir>/tests"],
   transform: {},
